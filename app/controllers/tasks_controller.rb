@@ -29,7 +29,7 @@ class TasksController < ApplicationController
   private
 
   def task_params
-    params.permit(:name, :explanation, :status).merge(genre_id: params[:genreId], deadline_date: params[:deadlineDate])
+    params.permit(:name, :explanation, :status, :priority).merge(genre_id: params[:genreId], deadline_date: params[:deadlineDate])
   end
 
   def select_task
